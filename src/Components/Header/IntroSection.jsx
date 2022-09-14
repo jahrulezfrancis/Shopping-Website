@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, VStack, Text, Button, Image } from '@chakra-ui/react';
+import { Box, Heading, HStack, VStack, Text, Button, Image, Stack } from '@chakra-ui/react';
 import React from 'react';
 import HappyGirl from "../../Components/Images/happy-girl.png"
 import YellowBackground from "../../Components/Images/yellow-background.png"
@@ -8,7 +8,28 @@ import Shopify from "../../Components/Images/shopify.png"
 import Lacoste from "../../Components/Images/lacoste.png"
 import Levis from "../../Components/Images/levis.png"
 import Amazon from "../../Components/Images/amazon.png"
+import HoodieGyal from "../../Components/Images/girl-with-orange-hoodie.png"
+import PhoneGirl from "../../Components/Images/girl-holding-phone.png"
+import GirlStyle from "../../Components/Images/girl-with-hand-on-neck.png"
+import { MdArrowForward } from 'react-icons/md';
 
+
+const Explore = (props) => {
+    return (
+        <HStack>
+            <VStack>
+                <Image src={props.image} />
+                <HStack spacing='4em'>
+                    <VStack spacing='-.2em' textAlign='start' width='auto' align='start' justify='start'>
+                        <Text>Hoodies & Sweatshirt</Text>
+                        <Text>Explore now</Text>
+                    </VStack>
+                    <MdArrowForward />
+                </HStack>
+            </VStack>
+        </HStack>
+    )
+}
 
 export default function IntroSection() {
     return (
@@ -34,6 +55,15 @@ export default function IntroSection() {
                 <Image src={Levis} alt='' />
                 <Image src={Amazon} alt='' />
             </HStack>
+            <Stack w='100%' align={{ sm: 'center', md: 'center', lg: 'flex-start' }} flexWrap='wrap'
+                display={{ sm: 'flex', md: 'none', lg: 'block' }} flexDirection={{ sm: "column", md: 'row', lg: 'row' }} textAlign='center' justify='center'>
+                <Text ml={{ sm: '1em', md: '3em', lg: '5em' }} textAlign='center' fontSize='1.4em' fontWeight='extrabold' fontFamily='Poppins' color='black'>NEW ARRIVALS</Text>
+                <HStack justify='center' w='100%' spacing='5em'>
+                    <Explore image={HoodieGyal} />
+                    <Explore image={PhoneGirl} />
+                    <Explore image={GirlStyle} />
+                </HStack>
+            </Stack>
         </Box>
     )
 }
