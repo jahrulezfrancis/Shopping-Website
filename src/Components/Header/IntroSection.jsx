@@ -2,7 +2,7 @@ import { Box, Heading, HStack, VStack, Text, Button, Image } from '@chakra-ui/re
 import React from 'react';
 import HappyGirl from "../../Components/Images/happy-girl.png"
 import YellowBackground from "../../Components/Images/yellow-background.png"
-import HM from "../../Components/Images/h&m.png"
+import HM from "../../Components/Images/hm.png"
 import OBEY from "../../Components/Images/obey.png"
 import Shopify from "../../Components/Images/shopify.png"
 import Lacoste from "../../Components/Images/lacoste.png"
@@ -22,7 +22,7 @@ export default function IntroSection() {
                         CLOTHES.
                     </Heading>
                     <Text>Live for Influential and Innovative fashion!</Text>
-                    <Button color='white' bgColor='black' _hover={{ bgColor: 'green.500' }}>Shop Now</Button>
+                    <Button color='white' bgColor='black' _hover={{ bgColor: '#EBD96B' }}>Shop Now</Button>
                 </VStack>
                 <Image src={HappyGirl} alt='' />
             </HStack>
