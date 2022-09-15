@@ -1,4 +1,7 @@
-import { Box, Heading, HStack, VStack, Text, Button, Image, Stack } from '@chakra-ui/react';
+import {
+    Box, Heading, HStack, VStack, Text, Button, Image, Stack, Input,
+    InputGroup, InputRightElement
+} from '@chakra-ui/react';
 import React from 'react';
 import HappyGirl from "../../Components/Images/happy-girl.png"
 import YellowBackground from "../../Components/Images/yellow-background.png"
@@ -92,7 +95,7 @@ export default function IntroSection() {
                         <Box bgImage={WhiteBG} bgRepeat='no-repeat' h='3em' textAlign='center' ml='-.7em'
                             fontSize='1.4em' fontWeight='extrabold' fontFamily='Poppins' color='black'
                         >
-                            <Heading p='.4em' extAlign='center'
+                            <Heading p='.4em' textAlign='center'
                                 fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
                                 PAYDAY
                             </Heading>
@@ -116,6 +119,25 @@ export default function IntroSection() {
     )
 }
 
+const NewsLetter = () => {
+    return (
+        <Box bgColor='#E5C643'>
+            <VStack align='center' minHeight='20em' justify='center' spacing='1.5em'>
+                <Heading textAlign='center' color='white' fontFamily='Poppins' fontWeight='900'>
+                    JOIN SHOPPING COMMUNITY TO <br />
+                    GET MONTHLY PROMO
+                </Heading>
+                <Text color='#FFFCF8'  fontFamily='Poppins' fontWeight='400'>
+                    Type your email down below and be young wild generation
+                </Text>
+                <InputGroup width='30em'>
+                    <Input bg='white' placeholder='Add your email here' minH='3em'/>
+                    <InputRightElement alignSelf='center' m='.2em' w='auto' children={<Button bgColor='black' color='white'>SEND</Button>} />
+                </InputGroup>
+            </VStack>
+        </Box >
+    )
+}
 
 export function BottomSection() {
     return (
@@ -133,7 +155,7 @@ export function BottomSection() {
                     </HStack>
                 </VStack>
             </Stack>
-            <Stack mt='5em' h='40em' w='100%' align='center'>
+            <Stack mt='5em' w='100%' align='center'>
                 <HStack spacing='10em'>
                     <VStack spacing='2em' justify='start' align='start'>
                         <Heading letterSpacing='2px' fontFamily='Poppins' fontWeight='1000' lineHeight='1.3em'>
@@ -154,6 +176,7 @@ export function BottomSection() {
                     </Stack>
                 </HStack>
             </Stack>
+            <NewsLetter />
         </Box>
     )
 }
