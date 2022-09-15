@@ -14,6 +14,9 @@ import GirlStyle from "../../Components/Images/girl-with-hand-on-neck.png"
 import { MdArrowForward } from 'react-icons/md';
 import YellowBackGirl from "../../Components/Images/yellow-background-girl.svg"
 import WhiteBG from "../../Components/Images/whitebg.png"
+import YoungFav1 from "../../Components/Images/Youngfav1.png"
+import YoungFav2 from "../../Components/Images/Youngfav2.png"
+
 
 
 const Explore = (props) => {
@@ -72,7 +75,7 @@ export default function IntroSection() {
                     <Explore image={GirlStyle} />
                 </HStack>
             </Stack>
-            <HStack spacing='5em' width='100%' h='25em' justify='center' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
+            <HStack spacing='5em' width='100%' h='25em' justify='center' mt='5em' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
                 #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, 
                 #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%,
                      #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%)'>
@@ -103,5 +106,22 @@ export default function IntroSection() {
                 </VStack>
             </HStack>
         </Box>
+    )
+}
+
+
+export function BottomSection() {
+    return (
+        <Stack>
+            <VStack>
+                <Heading>
+                    Young's Favorite
+                </Heading>
+                <HStack>
+                    <Explore image={YoungFav1} />
+                    <Explore image={YoungFav2} />
+                </HStack>
+            </VStack>
+        </Stack>
     )
 }
