@@ -16,6 +16,9 @@ import YellowBackGirl from "../../Components/Images/yellow-background-girl.svg"
 import WhiteBG from "../../Components/Images/whitebg.png"
 import YoungFav1 from "../../Components/Images/Youngfav1.png"
 import YoungFav2 from "../../Components/Images/Youngfav2.png"
+import Playstore from "../../Components/Images/playstore.png"
+import Applestore from "../../Components/Images/app-store.png"
+import MobileMockup from "../../Components/Images/Mobile-app.png"
 
 
 
@@ -29,7 +32,9 @@ const Explore = (props) => {
                         <Text>Hoodies & Sweatshirt</Text>
                         <Text>Explore now</Text>
                     </VStack>
-                    <MdArrowForward />
+                    <Stack>
+                        <MdArrowForward width='10em' />
+                    </Stack>
                 </HStack>
             </VStack>
         </HStack>
@@ -75,36 +80,38 @@ export default function IntroSection() {
                     <Explore image={GirlStyle} />
                 </HStack>
             </Stack>
-            <HStack spacing='5em' width='100%' h='25em' justify='center' mt='5em' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
+            <Stack m='5em 8em'>
+                <HStack spacing='5em' width='100%' h='25em' justify='center' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
                 #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, 
                 #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%,
-                     #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%)'>
-                <Stack w='50%'>
-                    <Image src={YellowBackGirl} alt='girl on yellow background' h='25em' />
-                </Stack>
-                <VStack justify='start' align='start' w='50%' spacing='.3em'>
-                    <Box bgImage={WhiteBG} bgRepeat='no-repeat' h='3em' textAlign='center' ml='-.7em'
-                        fontSize='1.4em' fontWeight='extrabold' fontFamily='Poppins' color='black'
-                    >
-                        <Heading p='.4em' extAlign='center'
-                            fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
-                            PAYDAY
-                        </Heading>
-                    </Box>
-                    <Heading textAlign='center' mb='3em' p='0em'
-                        fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
-                        SALE NOW
-                    </Heading>
-                    <Stack pt='2em' spacing='1em'>
-                        <Text>Spend minimal $100 get 30% off <br />
-                            voucher code for your next purchase
-                        </Text>
-                        <Text>1 June - 10 June 2021</Text>
-                        <Text>*Terms and conditons apply</Text>
-                        <ShoppingBTN />
+                #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%)'>
+                    <Stack w='50%'>
+                        <Image src={YellowBackGirl} alt='girl on yellow background' h='25em' />
                     </Stack>
-                </VStack>
-            </HStack>
+                    <VStack justify='start' align='start' w='50%' spacing='.3em'>
+                        <Box bgImage={WhiteBG} bgRepeat='no-repeat' h='3em' textAlign='center' ml='-.7em'
+                            fontSize='1.4em' fontWeight='extrabold' fontFamily='Poppins' color='black'
+                        >
+                            <Heading p='.4em' extAlign='center'
+                                fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
+                                PAYDAY
+                            </Heading>
+                        </Box>
+                        <Heading textAlign='center' mb='3em' p='0em'
+                            fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
+                            SALE NOW
+                        </Heading>
+                        <Stack pt='2em' spacing='1em'>
+                            <Text>Spend minimal $100 get 30% off <br />
+                                voucher code for your next purchase
+                            </Text>
+                            <Text>1 June - 10 June 2021</Text>
+                            <Text>*Terms and conditons apply</Text>
+                            <ShoppingBTN />
+                        </Stack>
+                    </VStack>
+                </HStack>
+            </Stack>
         </Box>
     )
 }
@@ -112,16 +119,41 @@ export default function IntroSection() {
 
 export function BottomSection() {
     return (
-        <Stack>
-            <VStack>
-                <Heading>
-                    Young's Favorite
-                </Heading>
-                <HStack>
-                    <Explore image={YoungFav1} />
-                    <Explore image={YoungFav2} />
+        <Box>
+            <Stack m='5em 10em'>
+                <VStack justify='center' align='start'>
+                    <Stack mb='2em'>
+                        <Heading fontSize='3em' lineHeight='2.5em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
+                            Young's Favorite
+                        </Heading>
+                    </Stack>
+                    <HStack mt='2em' spacing='2em'>
+                        <Explore image={YoungFav1} />
+                        <Explore image={YoungFav2} />
+                    </HStack>
+                </VStack>
+            </Stack>
+            <Stack mt='5em' h='40em' w='100%' align='center'>
+                <HStack spacing='10em'>
+                    <VStack spacing='2em' justify='start' align='start'>
+                        <Heading letterSpacing='2px' fontFamily='Poppins' fontWeight='1000' lineHeight='1.3em'>
+                            DOWNLOAD APP & <br />
+                            GET THE VOUCHER!
+                        </Heading>
+                        <Text>
+                            Get 30% off for first transaction using <br />
+                            Rondovision mobile app for now.
+                        </Text>
+                        <HStack>
+                            <Image src={Playstore} alt='' />
+                            <Image src={Applestore} alt='' />
+                        </HStack>
+                    </VStack>
+                    <Stack>
+                        <Image src={MobileMockup} alt='mobile mockup' />
+                    </Stack>
                 </HStack>
-            </VStack>
-        </Stack>
+            </Stack>
+        </Box>
     )
 }
