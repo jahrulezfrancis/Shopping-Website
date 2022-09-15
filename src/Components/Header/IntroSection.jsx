@@ -33,6 +33,12 @@ const Explore = (props) => {
     )
 }
 
+const ShoppingBTN = () => {
+    return (
+        <Button color='white' w='8em' bgColor='black' _hover={{ bgColor: '#EBD96B' }}>Shop Now</Button>
+    )
+}
+
 export default function IntroSection() {
     return (
         <Box>
@@ -45,7 +51,7 @@ export default function IntroSection() {
                         CLOTHES.
                     </Heading>
                     <Text>Live for Influential and Innovative fashion!</Text>
-                    <Button color='white' bgColor='black' _hover={{ bgColor: '#EBD96B' }}>Shop Now</Button>
+                    <ShoppingBTN />
                 </VStack>
                 <Image src={HappyGirl} alt='' />
             </HStack>
@@ -66,13 +72,15 @@ export default function IntroSection() {
                     <Explore image={GirlStyle} />
                 </HStack>
             </Stack>
-            <HStack width='100%' h='20em' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
+            <HStack spacing='5em' width='100%' h='25em' justify='center' bgGradient='linear(1.32deg, #E0C340 0.13%, #DFC23E 3.97%, #E1C441 7.2%, 
                 #E3C743 10.13%, #E4C542 12.98%, #E6C744 15.99%, #E7C845 19.52%, #E5C643 23.96%, 
                 #E6C945 30.43%, #E3C743 36.49%, #E9CA48 42.49%, #EDCE49 49.35%, #F0D44C 55.42%, #F4D84F 61.43%,
                      #F6DA52 65.74%, #F7DB53 72.23%, #F9DD55 77.43%, #F9DF56 83.84%, #FAE157 91.52%, #F9DF56 97.87%)'>
-                <Image src={YellowBackGirl} alt='girl on yellow background' h='20em' />
-                <VStack justify='start' align='start'>
-                    <Box bgImage={WhiteBG} bgRepeat='no-repeat' h='3em' textAlign='center'
+                <Stack w='50%'>
+                    <Image src={YellowBackGirl} alt='girl on yellow background' h='25em' />
+                </Stack>
+                <VStack justify='start' align='start' w='50%' spacing='.3em'>
+                    <Box bgImage={WhiteBG} bgRepeat='no-repeat' h='3em' textAlign='center' ml='-.7em'
                         fontSize='1.4em' fontWeight='extrabold' fontFamily='Poppins' color='black'
                     >
                         <Heading p='.4em' extAlign='center'
@@ -80,15 +88,18 @@ export default function IntroSection() {
                             PAYDAY
                         </Heading>
                     </Box>
-                    <Heading textAlign='center'
+                    <Heading textAlign='center' mb='3em' p='0em'
                         fontSize='2em' fontWeight='extrabold' fontFamily='Poppins' color='black'>
                         SALE NOW
                     </Heading>
-                    <Text>Spend minimal $100 get 30% off <br />
-                        voucher code for your next purchase
-                    </Text>
-                    <Text>1 June - 10 June 2021</Text>
-                    <Text>*Terms and conditons apply</Text>
+                    <Stack pt='2em' spacing='1em'>
+                        <Text>Spend minimal $100 get 30% off <br />
+                            voucher code for your next purchase
+                        </Text>
+                        <Text>1 June - 10 June 2021</Text>
+                        <Text>*Terms and conditons apply</Text>
+                        <ShoppingBTN />
+                    </Stack>
                 </VStack>
             </HStack>
         </Box>
