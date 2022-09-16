@@ -78,7 +78,7 @@ export function MobileMenu() {
                         </MenuItem>
                         <MenuItem>
                             <NavLink>
-                                <Button bgColor='black' color='white' _hover={{bgColor:'black'}}>Sign Up</Button>
+                                <Button bgColor='black' color='white' _hover={{ bgColor: 'black' }}>Sign Up</Button>
                             </NavLink>
                         </MenuItem>
                     </MenuList>
