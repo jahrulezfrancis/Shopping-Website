@@ -127,11 +127,11 @@ const NewsLetter = () => {
                     JOIN SHOPPING COMMUNITY TO <br />
                     GET MONTHLY PROMO
                 </Heading>
-                <Text color='#FFFCF8'  fontFamily='Poppins' fontWeight='400'>
+                <Text color='#FFFCF8' fontFamily='Poppins' fontWeight='400'>
                     Type your email down below and be young wild generation
                 </Text>
                 <InputGroup width='30em'>
-                    <Input bg='white' placeholder='Add your email here' minH='3em'/>
+                    <Input bg='white' placeholder='Add your email here' minH='3em' />
                     <InputRightElement alignSelf='center' m='.2em' w='auto' children={<Button bgColor='black' color='white'>SEND</Button>} />
                 </InputGroup>
             </VStack>
